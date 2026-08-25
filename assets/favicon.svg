@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">HCS3 新準資通</title>
+  <rect width="512" height="512" rx="108" fill="#0a2865"/>
+  <circle cx="410" cy="102" r="118" fill="#0759d8" opacity=".55"/>
+  <path d="M-20 420C105 268 238 254 532 376V532H-20Z" fill="#0759d8" opacity=".34"/>
+  <text x="58" y="316" fill="#fff" font-family="Arial, sans-serif" font-size="178" font-weight="700" letter-spacing="-12">HCS</text>
+  <text x="394" y="178" fill="#8fc9ff" font-family="Arial, sans-serif" font-size="82" font-weight="700">3</text>
+</svg>

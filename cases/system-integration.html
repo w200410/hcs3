@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="大型餐飲服務集團的系統整合案例：以中介資料庫及 SQL Server Agent 串接人資、ERP、簽核、人才發展與 BI 系統。">
+  <meta name="theme-color" content="#0a2865">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://www.hcs3.com/cases/system-integration.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="HCS³ 新準資通">
+  <meta property="og:title" content="跨系統資料同步與交換自動化｜HCS³ 實務案例">
+  <meta property="og:description" content="建立共通交換層，串接人資、ERP、簽核、人才發展與 BI 等異質系統，並提供異常通知與失敗重跑。">
+  <meta property="og:url" content="https://www.hcs3.com/cases/system-integration.html">
+  <meta property="og:image" content="https://www.hcs3.com/assets/hcs3-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HCS³ 新準資通實務案例">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="跨系統資料同步與交換自動化｜HCS³ 實務案例">
+  <meta name="twitter:description" content="建立共通交換層，串接人資、ERP、簽核、人才發展與 BI 等異質系統，並提供異常通知與失敗重跑。">
+  <meta name="twitter:image" content="https://www.hcs3.com/assets/hcs3-social-card.png">
+  <title>跨系統資料同步與交換自動化｜HCS³ 實務案例</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://www.hcs3.com/cases/system-integration.html#article",
+        "headline": "跨系統資料同步與交換自動化",
+        "description": "大型餐飲服務集團的系統整合案例：以中介資料庫及 SQL Server Agent 串接人資、ERP、簽核、人才發展與 BI 系統。",
+        "url": "https://www.hcs3.com/cases/system-integration.html",
+        "mainEntityOfPage": "https://www.hcs3.com/cases/system-integration.html",
+        "image": "https://www.hcs3.com/assets/hcs3-social-card.png",
+        "datePublished": "2026-08-25",
+        "dateModified": "2026-08-25",
+        "inLanguage": "zh-Hant-TW",
+        "author": { "@type": "Organization", "name": "新準資通有限公司", "url": "https://www.hcs3.com/" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "新準資通有限公司",
+          "url": "https://www.hcs3.com/",
+          "logo": { "@type": "ImageObject", "url": "https://www.hcs3.com/assets/favicon.svg" }
+        },
+        "about": ["系統整合", "資料同步", "SQL Server Agent", "HCS API Agent"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.hcs3.com/" },
+          { "@type": "ListItem", "position": 2, "name": "實務案例", "item": "https://www.hcs3.com/#cases" },
+          { "@type": "ListItem", "position": 3, "name": "跨系統資料同步與交換自動化", "item": "https://www.hcs3.com/cases/system-integration.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css?v=20260825-1">
+  <script src="../script.js?v=20260825-1" defer></script>
+</head>
+<body class="case-page">
+  <header class="site-header" id="site-header">
+    <a class="brand" href="../index.html" aria-label="HCS3 首頁">
+      <span class="brand-mark">HCS<sup>3</sup></span>
+      <span class="brand-name">新準資通</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="開啟導覽選單">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="主要導覽">
+      <a href="../index.html#services">核心服務</a>
+      <a href="../index.html#experience">實務經驗</a>
+      <a href="../index.html#cases" aria-current="page">實務案例</a>
+      <a href="../index.html#approach">合作方式</a>
+      <a class="nav-cta" href="../index.html#contact">聯絡我們</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="section">
+        <nav class="breadcrumb" aria-label="麵包屑導覽">
+          <a href="../index.html">首頁</a><span aria-hidden="true">/</span>
+          <a href="../index.html#cases">實務案例</a><span aria-hidden="true">/</span>
+          <span>跨系統資料同步與功能延伸</span>
+        </nav>
+
+        <div class="case-hero-grid">
+          <div>
+            <p class="eyebrow">SYSTEM INTEGRATION · CASE 03</p>
+            <p class="case-hero-industry">大型餐飲服務集團</p>
+            <h1>跨系統資料同步與交換自動化</h1>
+            <p class="case-summary">建立中介資料庫作為多套異質系統的共通交換層，讓資料介接從一次性程式，轉變為可排程、可追蹤、可復原並能持續延伸的整合架構。</p>
+            <p class="case-disclosure">本案例整理自核心成員過往任職期間主導的企業系統專案經驗，為保護客戶及合作夥伴資訊，採匿名方式呈現。</p>
+          </div>
+
+          <dl class="case-facts">
+            <div><dt>服務類別</dt><dd>跨系統資料同步與功能延伸</dd></div>
+            <div><dt>介接範圍</dt><dd>人資、ERP、簽核、HRD 與 BI</dd></div>
+            <div><dt>核心架構</dt><dd>中介資料庫與 SQL Server Agent</dd></div>
+            <div><dt>管理能力</dt><dd>異常通知、執行記錄與失敗重跑</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div class="section case-layout">
+      <article class="case-content">
+        <section class="case-section" id="background">
+          <p class="case-section-number">01 · PROJECT BACKGROUND</p>
+          <h2>系統持續增加，Excel 成為系統之間的搬運工具</h2>
+          <p>隨著企業資訊化範圍逐步擴大，既有人資系統先後產生與 ERP 基礎資料、電子簽核系統、會計傳票、人才發展系統及 BI 分析系統進行資料交換的需求。</p>
+          <p>在系統介接完成前，不同單位必須先將資料匯出，以 Excel 進行整理與格式轉換，再人工匯入目標系統。不僅需要重複處理資料，也容易因欄位格式、資料內容或操作時間不同而發生異常。</p>
+        </section>
+
+        <section class="case-section" id="challenge">
+          <p class="case-section-number">02 · THE CHALLENGE</p>
+          <h2>需求與多方認知持續變動，架構不能綁死</h2>
+          <p>本案涉及多套異質系統，各系統的資料結構、交換格式、執行時間與負責單位均不相同。專案進行期間，需求、資料定義及不同單位對流程的認知也持續調整。</p>
+          <p>若直接為每兩套系統分別建立固定介接程式，後續需求改變時容易牽動多個介接點，也會提高測試與維護成本。</p>
+          <div class="case-callout">唯一不變的是改變。因此，設計重點不是把當下需求寫死，而是建立能持續調整資料來源、格式與排程的共通架構。</div>
+        </section>
+
+        <section class="case-section" id="solution">
+          <p class="case-section-number">03 · IMPLEMENTATION</p>
+          <h2>以中介資料庫建立共通交換與排程管理</h2>
+          <p>核心成員主導需求分析、系統設計與跨單位協調，設計中介資料庫作為人資、ERP、簽核、人才發展及 BI 等異質系統之間的共通資料來源與交換層。</p>
+
+          <h3>共通資料交換層</h3>
+          <p>各系統不必直接彼此綁定，而是透過中介資料庫進行資料整理、轉換與交換，降低單一系統異動對其他介接流程的影響。</p>
+
+          <h3>定時同步與格式轉換</h3>
+          <ul>
+            <li>定時同步組織、人員等基礎資料及資料倉儲所需內容。</li>
+            <li>依照薪資會計傳票及分錄需求，自動產生目標系統所需的上傳格式。</li>
+            <li>整合多個資料來源，製作符合管理需求的綜合性客製報表。</li>
+          </ul>
+
+          <h3>異常檢查與電子郵件提醒</h3>
+          <p>資料交換前先檢查來源內容與必要欄位。發現資料缺漏、格式不符或內容異常時，透過電子郵件通知相關人員確認，避免錯誤資料直接進入後續系統。</p>
+
+          <h3>執行記錄與失敗重跑</h3>
+          <p>自動化排程透過 SQL Server Agent 執行，並由 SQL 層記錄工作的執行時間、處理狀態與異常結果。介接工作執行失敗時，可依記錄確認問題並進行失敗重跑，不必重新處理整批資料。</p>
+        </section>
+
+        <section class="case-section" id="result">
+          <p class="case-section-number">04 · OUTCOME</p>
+          <h2>從人工搬運資料，轉為可管理的自動交換流程</h2>
+          <p>透過中介資料庫、SQL Server Agent 與自動化排程，逐步建立異質系統和既有人資系統之間的資料交換標準。</p>
+          <p>基礎資料、會計傳票與分析資料能依排程自動交換，降低 Excel 整理、格式轉換及人工匯入的需求；每項介接工作也保留執行記錄，並具備異常通知與失敗重跑能力。</p>
+          <p>更重要的是，整合架構保留面對需求變動的彈性。後續新增系統、資料來源或交換格式時，可以在既有基礎上繼續延伸，不必推翻原有介接流程。</p>
+        </section>
+
+        <section class="case-section" id="agent">
+          <p class="case-section-number">05 · EXPERIENCE TO PRODUCT</p>
+          <h2>從實務整合經驗延伸至 HCS API Agent</h2>
+          <p>這類中介資料庫、T-SQL 排程、異常通知、執行記錄與失敗復原的實務經驗，成為後續發展 HCS API Agent 架構的重要基礎。</p>
+          <p>本案例並非使用現今的 HCS API Agent 產品，而是呈現核心成員如何從長期企業整合需求中，累積可重複應用的架構思維與交付經驗。</p>
+        </section>
+
+        <nav class="case-navigation" aria-label="案例頁面導覽">
+          <a href="payroll-reconciliation.html"><small>上一個案例</small><strong>結薪前異常預警與跨期薪資自動追補</strong></a>
+          <a href="../index.html#cases"><small>返回</small><strong>查看全部實務案例</strong></a>
+        </nav>
+      </article>
+
+      <aside class="case-sidebar" aria-label="本頁導覽">
+        <div class="case-sidebar-card">
+          <p>CASE 03 · CONTENTS</p>
+          <nav aria-label="案例段落">
+            <a href="#background">專案背景</a>
+            <a href="#challenge">面臨挑戰</a>
+            <a href="#solution">實施方式</a>
+            <a href="#result">改善結果</a>
+            <a href="#agent">經驗延伸</a>
+          </nav>
+          <a class="button" href="../index.html#contact">討論類似問題 <span aria-hidden="true">↗</span></a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="case-cta">
+      <div class="section">
+        <p class="eyebrow light">START WITH ONE PROBLEM</p>
+        <h2>資料仍在不同系統之間<br>人工搬運嗎？</h2>
+        <p>不必先更換既有系統。我們會從目前的資料來源、交換流程與異常情況開始，找出適合的整合方式。</p>
+        <a class="button" href="../index.html#contact">說說目前的問題 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section footer-bottom">
+      <p class="footer-brand">HCS<sup>3</sup>　新準資通有限公司</p>
+      <p>Hsin-Chung Solutions Co., Ltd.</p>
+      <p>© <span id="year">2026</span> HCS³. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

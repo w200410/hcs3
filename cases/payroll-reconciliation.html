@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="科技製造業者的計薪自動化案例：每日預警差勤內控異常，並針對結薪後的歷史異動自動重算薪資差額與產生加扣款單。">
+  <meta name="theme-color" content="#0a2865">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://www.hcs3.com/cases/payroll-reconciliation.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="HCS³ 新準資通">
+  <meta property="og:title" content="結薪前異常預警與跨期薪資自動追補｜HCS³ 實務案例">
+  <meta property="og:description" content="每日主動排查差勤單據，並針對結薪後的歷史異動重新計算薪資差額、自動產生本期加扣款單。">
+  <meta property="og:url" content="https://www.hcs3.com/cases/payroll-reconciliation.html">
+  <meta property="og:image" content="https://www.hcs3.com/assets/hcs3-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HCS³ 新準資通實務案例">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="結薪前異常預警與跨期薪資自動追補｜HCS³ 實務案例">
+  <meta name="twitter:description" content="每日主動排查差勤單據，並針對結薪後的歷史異動重新計算薪資差額、自動產生本期加扣款單。">
+  <meta name="twitter:image" content="https://www.hcs3.com/assets/hcs3-social-card.png">
+  <title>結薪前異常預警與跨期薪資自動追補｜HCS³ 實務案例</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://www.hcs3.com/cases/payroll-reconciliation.html#article",
+        "headline": "結薪前異常預警與跨期薪資自動追補",
+        "description": "科技製造業者的計薪自動化案例：每日預警差勤內控異常，並針對結薪後的歷史異動自動重算薪資差額與產生加扣款單。",
+        "url": "https://www.hcs3.com/cases/payroll-reconciliation.html",
+        "mainEntityOfPage": "https://www.hcs3.com/cases/payroll-reconciliation.html",
+        "image": "https://www.hcs3.com/assets/hcs3-social-card.png",
+        "datePublished": "2026-08-25",
+        "dateModified": "2026-08-25",
+        "inLanguage": "zh-Hant-TW",
+        "author": { "@type": "Organization", "name": "新準資通有限公司", "url": "https://www.hcs3.com/" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "新準資通有限公司",
+          "url": "https://www.hcs3.com/",
+          "logo": { "@type": "ImageObject", "url": "https://www.hcs3.com/assets/favicon.svg" }
+        },
+        "about": ["計薪自動化", "薪資核對", "差勤內控", "薪資追補扣"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.hcs3.com/" },
+          { "@type": "ListItem", "position": 2, "name": "實務案例", "item": "https://www.hcs3.com/#cases" },
+          { "@type": "ListItem", "position": 3, "name": "結薪前異常預警與跨期薪資自動追補", "item": "https://www.hcs3.com/cases/payroll-reconciliation.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css?v=20260825-1">
+  <script src="../script.js?v=20260825-1" defer></script>
+</head>
+<body class="case-page">
+  <header class="site-header" id="site-header">
+    <a class="brand" href="../index.html" aria-label="HCS3 首頁">
+      <span class="brand-mark">HCS<sup>3</sup></span>
+      <span class="brand-name">新準資通</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="開啟導覽選單">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="主要導覽">
+      <a href="../index.html#services">核心服務</a>
+      <a href="../index.html#experience">實務經驗</a>
+      <a href="../index.html#cases" aria-current="page">實務案例</a>
+      <a href="../index.html#approach">合作方式</a>
+      <a class="nav-cta" href="../index.html#contact">聯絡我們</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="section">
+        <nav class="breadcrumb" aria-label="麵包屑導覽">
+          <a href="../index.html">首頁</a><span aria-hidden="true">/</span>
+          <a href="../index.html#cases">實務案例</a><span aria-hidden="true">/</span>
+          <span>計薪前置與核對自動化</span>
+        </nav>
+
+        <div class="case-hero-grid">
+          <div>
+            <p class="eyebrow">PAYROLL AUTOMATION · CASE 02</p>
+            <p class="case-hero-industry">科技製造業者</p>
+            <h1>結薪前異常預警與跨期薪資自動追補</h1>
+            <p class="case-summary">結薪前主動找出不符合內控規則的差勤單據；結薪後若有歷史資料異動，則自動重算、比對並產生本期追補扣。</p>
+            <p class="case-disclosure">本案例整理自核心成員過往任職期間主導的企業系統專案經驗，為保護客戶及合作夥伴資訊，採匿名方式呈現。</p>
+          </div>
+
+          <dl class="case-facts">
+            <div><dt>服務類別</dt><dd>計薪前置與核對自動化</dd></div>
+            <div><dt>主要情境</dt><dd>差勤內控與跨期薪資調整</dd></div>
+            <div><dt>改善範圍</dt><dd>預警、重算、差額比對與追補扣</dd></div>
+            <div><dt>既有環境</dt><dd>延伸原有人資與薪資系統</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div class="section case-layout">
+      <article class="case-content">
+        <section class="case-section" id="background">
+          <p class="case-section-number">01 · PROJECT BACKGROUND</p>
+          <h2>結薪前來不及修正，結薪後又必須重新追算</h2>
+          <p>客戶對請假、加班等差勤單據設有多項內部控制規則。考量逐一修改套裝系統功能的成本，並未把所有規則直接加入每一種單據的輸入與簽核流程。</p>
+          <p>員工或簽核主管可能忽略部分條件，等到人資在結薪前集中檢查後才通知修改，往往已壓縮處理時間並影響計薪進度。</p>
+          <p>即使薪資已完成結算，仍可能發生員工補登、修改或刪除前期請假與加班資料。這些歷史差勤異動需要重新計算，並將差額於本期薪資中補發或扣回。</p>
+        </section>
+
+        <section class="case-section" id="challenge">
+          <p class="case-section-number">02 · THE CHALLENGE</p>
+          <h2>歷史差勤異動會連動整個薪資計算基礎</h2>
+          <p>一般人資系統通常無法針對已結薪期間，同時完成歷史請假、加班、班別津貼與薪資計算基礎的重新核算。</p>
+          <p>若缺少客製功能，人資必須人工列出每一筆增刪修改紀錄，重新計算請假扣款、加班費與班別津貼，再與原始薪資逐項比對，才能得出本期應追補或追扣的金額。</p>
+          <div class="case-callout">本案的請假與加班會影響班別津貼，並連帶改變平均時薪，因此不能只計算單筆差額，而必須重新核算受影響期間的完整薪資基礎。</div>
+        </section>
+
+        <section class="case-section" id="solution">
+          <p class="case-section-number">03 · IMPLEMENTATION</p>
+          <h2>以「事前預警」與「事後追補」建立兩層機制</h2>
+          <p>核心成員從需求分析、系統設計到導入顧問輔導全程主導，針對結薪前與結薪後的不同問題，在既有人資系統架構下設計兩層自動化機制。</p>
+
+          <h3>第一層：結薪前主動預警</h3>
+          <p>建立每日定時執行的自動檢查機制，依照客戶設定的內控邏輯排查請假、加班等差勤單據。</p>
+          <p>發現異常時，系統透過電子郵件通知單據申請人、簽核主管與人資人員，列出異常單據及不符合的內控情境，提醒相關人員儘速確認與修改。</p>
+
+          <h3>第二層：結薪後歷史資料重算</h3>
+          <p>針對結薪後才補登或修改的請假與加班資料，延伸第二套薪資重算機制，同時保留原始結薪資料與異動後的重算版本。</p>
+          <ul>
+            <li>保留原始結薪時的差勤與薪資紀錄。</li>
+            <li>重新計算請假、加班、班別津貼及平均時薪。</li>
+            <li>比較原始薪資與重算結果，得出本期調整差額。</li>
+            <li>自動產生本期加扣款單。</li>
+            <li>在薪資條中提示差額與調整資訊。</li>
+          </ul>
+        </section>
+
+        <section class="case-section" id="result">
+          <p class="case-section-number">04 · OUTCOME</p>
+          <h2>異常提早處理，跨期調整也能核對追溯</h2>
+          <p>每日自動排查讓差勤異常不必等到結薪前才集中發現，相關人員能更早收到通知並完成修正，降低人資最後階段的追查與催辦壓力。</p>
+          <p>若結薪後仍發生歷史資料異動，系統則自動完成薪資重算、版本比對、加扣款單產生與薪資條差額提示，取代逐筆整理異動明細及人工計算的工作。</p>
+          <p>原始結薪資料、重算結果與差額來源均被保留，使跨期薪資調整具備明確依據，也能供人資後續核對與追溯。</p>
+        </section>
+
+        <nav class="case-navigation" aria-label="案例頁面導覽">
+          <a href="scheduling-attendance.html"><small>上一個案例</small><strong>多段班與彈性出勤的智能校調</strong></a>
+          <a href="system-integration.html"><small>下一個案例</small><strong>跨系統資料同步與交換自動化</strong></a>
+        </nav>
+      </article>
+
+      <aside class="case-sidebar" aria-label="本頁導覽">
+        <div class="case-sidebar-card">
+          <p>CASE 02 · CONTENTS</p>
+          <nav aria-label="案例段落">
+            <a href="#background">專案背景</a>
+            <a href="#challenge">面臨挑戰</a>
+            <a href="#solution">實施方式</a>
+            <a href="#result">改善結果</a>
+          </nav>
+          <a class="button" href="../index.html#contact">討論類似問題 <span aria-hidden="true">↗</span></a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="case-cta">
+      <div class="section">
+        <p class="eyebrow light">START WITH ONE PROBLEM</p>
+        <h2>計薪前仍有大量人工<br>核對與追算嗎？</h2>
+        <p>從目前最耗時的一項核對工作開始，我們會協助釐清資料來源、計算規則與適合的自動化範圍。</p>
+        <a class="button" href="../index.html#contact">說說目前的問題 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section footer-bottom">
+      <p class="footer-brand">HCS<sup>3</sup>　新準資通有限公司</p>
+      <p>Hsin-Chung Solutions Co., Ltd.</p>
+      <p>© <span id="year">2026</span> HCS³. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

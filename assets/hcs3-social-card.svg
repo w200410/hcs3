@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">HCS3 新準資通</title>
+  <desc id="desc">整合現有，讓複雜變簡單</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b49"/>
+      <stop offset="1" stop-color="#0a2865"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fc9ff"/>
+      <stop offset="1" stop-color="#0759d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1080" cy="50" r="360" fill="none" stroke="#8fc9ff" stroke-width="70" opacity=".12"/>
+  <circle cx="1080" cy="50" r="235" fill="none" stroke="#4ea4ff" stroke-width="2" opacity=".45"/>
+  <path d="M690 630C810 424 1008 402 1250 512V680H690Z" fill="url(#accent)" opacity=".26"/>
+  <g transform="translate(78 74)">
+    <text x="0" y="55" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="700" letter-spacing="-3">HCS</text>
+    <text x="111" y="22" fill="#8fc9ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">3</text>
+    <text x="158" y="53" fill="#adc4e7" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="25" font-weight="700" letter-spacing="5">新準資通</text>
+  </g>
+  <text x="78" y="298" fill="#fff" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="68" font-weight="700">整合現有，讓複雜變簡單</text>
+  <text x="82" y="374" fill="#adc4e7" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="28">智能排班｜計薪核對｜系統整合｜客製程式</text>
+  <rect x="80" y="453" width="176" height="4" rx="2" fill="#4ea4ff"/>
+  <text x="80" y="519" fill="#8fc9ff" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">WWW.HCS3.COM</text>
+</svg>
